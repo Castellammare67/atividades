@@ -1,0 +1,94 @@
+1--
+ int INDICE = 13, SOMA = 0, K = 0;
+
+        while (K < INDICE)
+        {
+            K=K + 1;
+            SOMA = SOMA+K;
+        }
+        System.out.println(SOMA);
+
+
+2--
+ public static void main(String[] args)
+    {
+        System.out.println("Digite o Numero");
+        Scanner entrada = new Scanner(System.in);
+        int numeroDigitado = entrada.nextInt();
+
+
+
+        for (int i =1; i < 1000; i++)
+            if (fibonacci(i) == numeroDigitado)
+            {
+                System.out.println("Numero esta na sequencia ");
+                break;
+            }else if (fibonacci(i) > numeroDigitado)
+            {
+                System.out.println("Numero nao esta na sequencia");
+                break;
+            }
+        else
+        {
+            System.out.println(fibonacci(i));
+        }
+
+
+    }
+
+    public static int fibonacci(int nun) {
+        if (nun == 0)
+            return 0;
+        else if (nun == 1)
+            return 1;
+        else
+            return fibonacci(nun - 1) + fibonacci(nun - 2);
+
+
+
+    }
+    
+    3--
+     public static void main(String[] args)
+    {
+      double  SP =67836.43, RJ = 36678.66, MG = 29229.88, ES = 27165.48, Outros = 19849.53;
+
+      double total = SP+RJ+MG+ES+Outros;
+        System.out.println("Faturamento Total " + total);
+
+       double psp = ((SP/total)*100);
+        System.out.println("Percentual de representação do estado de Sp: "+psp+"%");
+       double prj = ((RJ/total)*100);
+        System.out.println("Percentual de representação do estado de Rj: "+prj+"%");
+       double pmg = ((MG/total)*100);
+        System.out.println("Percentual de representação do estado de Mg: "+pmg+"%");
+       double pes = ((ES/total)*100);
+        System.out.println("Percentual de representação do estado de Es: "+pes+"%");
+       double pout = ((Outros/total)*100);
+        System.out.println("Percentual de representação de outros estados: "+pout+"%");
+    }
+    
+    4--
+    Nao sei
+    
+    5--
+    public static void main(String[] args)
+    {
+        String palindromo = "Como vai voce";
+        int len = palindromo.length();
+        char[] tempCharArray = new char[len];
+        char[] charArray = new char[len];
+
+        // colocar sequência original em uma matriz de chars
+        for (int i = 0; i < len; i++) {
+            tempCharArray[i] = palindromo.charAt(i);
+        }
+
+        // matriz reversa de chars
+        for (int j = 0; j < len; j++) {
+            charArray[j] = tempCharArray[len - 1 - j];
+        }
+
+        String reverPalindromo = new String(charArray);
+        System.out.println(reverPalindromo);
+    }
